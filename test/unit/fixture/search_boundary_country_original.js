@@ -14,6 +14,7 @@ module.exports = {
           'match': {
             'name.default': {
               'query': 'test',
+              'cutoff_frequency': 0.01,
               'boost': 1,
               'analyzer': 'peliasQueryFullToken'
             }
@@ -24,6 +25,7 @@ module.exports = {
         'match': {
           'phrase.default': {
             'query': 'test',
+            'cutoff_frequency': 0.01,
             'analyzer': 'peliasPhrase',
             'type': 'phrase',
             'boost': 1,
@@ -36,6 +38,7 @@ module.exports = {
             'match': {
               'phrase.default': {
                 'query': 'test',
+                'cutoff_frequency': 0.01,
                 'analyzer': 'peliasPhrase',
                 'type': 'phrase',
                 'slop': 2,
@@ -61,6 +64,7 @@ module.exports = {
             'match': {
               'phrase.default': {
                 'query': 'test',
+                'cutoff_frequency': 0.01,
                 'analyzer': 'peliasPhrase',
                 'type': 'phrase',
                 'slop': 2,

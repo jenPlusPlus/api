@@ -20,11 +20,13 @@ module.exports = _.merge({}, peliasQuery.defaults, {
   'ngram:analyzer': 'peliasQueryFullToken',
   'ngram:field': 'name.default',
   'ngram:boost': 1,
+  'ngram:cutoff_frequency': 0.01,
 
   'phrase:analyzer': 'peliasPhrase',
   'phrase:field': 'phrase.default',
   'phrase:boost': 1,
   'phrase:slop': 2,
+  'phrase:cutoff_frequency': 0.01,
 
   'focus:function': 'linear',
   'focus:offset': '0km',
@@ -46,6 +48,8 @@ module.exports = _.merge({}, peliasQuery.defaults, {
   'address:postcode:analyzer': 'peliasZip',
   'address:postcode:field': 'address_parts.zip',
   'address:postcode:boost': 20,
+
+  'address:cutoff_frequency': 0.01,
 
   'admin:country_a:analyzer': 'standard',
   'admin:country_a:field': 'parent.country_a',
@@ -82,6 +86,8 @@ module.exports = _.merge({}, peliasQuery.defaults, {
   'admin:neighbourhood:analyzer': 'peliasAdmin',
   'admin:neighbourhood:field': 'parent.neighbourhood',
   'admin:neighbourhood:boost': 1,
+
+  'admin:cutoff_frequency': 0.01,
 
   'popularity:field': 'popularity',
   'popularity:modifier': 'log1p',
